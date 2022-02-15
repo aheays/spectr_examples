@@ -4,7 +4,7 @@ set -o nounset -o errexit -o xtrace
 
 ####################################################################
 ## A script to install spectr and its dependencies into a virtual ##
-## environment                                                    ##
+## environment. Pretty dangerous to run this                      ##
 ####################################################################
 
 ## make and start virtual environment
@@ -31,10 +31,13 @@ cd -
 cd spectr
 make
 
+## clone example scripts
+git clone --depth=1 https://github.com/aheays/spectr_examples.git
+
 ## test
 source venv3.9/bin/activate
 echo "from spectr.env import *" | python
-qplot examples/absorption/data/2021_11_30_bcgr.0
+qplot spectr_examples/absorption/data/2021_11_30_bcgr.0
 
 ## close virtual environment
 deactivate
