@@ -2,9 +2,9 @@
 #+OPTIONS: toc:2
 #+TITLE:Example scripts and data of use with =spectr=
 * Introduction
-This document and example scripts were tested against https://github.com/aheays/spectr vesion ~v1.3.0~.
+This document and example scripts were tested against https://github.com/aheays/spectr version ~v1.3.0~.
+A sort-of-guide for installing the =spectr= library is included there.
 
-A sort-of-guide of installing the =spectr= library is included in https://github.com/aheays/spectr.
 To install these example scripts and data clone [[https://github.com/aheays/spectr_examples]], with, e.g., , =git clone --depth=1 https://github.com/aheays/spectr_examples.git=.
 
 * To run the scripts
