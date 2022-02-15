@@ -74,8 +74,8 @@ vlevel.add_manifold(
 ## make a VibLine object that combines level data and transition
 ## moments into a line spectrum. 
 line = viblevel.Line(
-    'line',                       # a convenient name
-    vlevel,                          # Level object
+    name='line',                       # a convenient name
+    level=vlevel,                          # Level object
 )
 ## Add electric-dipole transition moments (atomic units) between two
 ## ascii or unicode encoded electronic-vibrational levels

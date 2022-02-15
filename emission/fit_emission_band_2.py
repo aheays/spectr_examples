@@ -26,7 +26,7 @@ for kwargs in (
 ):
     vlevel.add_manifold(**kwargs)
 
-vline = viblevel.Line('vline',vlevel)
+vline = viblevel.Line(name='vline',level=vlevel)
 vline.add_transition_moment(name_u='B³Πg(v=5)'  , name_l='A³Σ⁺u(v=1)' , μv=P(0.597898245576 ,False, 1e-05))
 vline.add_transition_moment(name_u='B³Πg(v=6)'  , name_l='A³Σ⁺u(v=2)' , μv=1)
 vline.add_transition_moment(name_u='B³Πg(v=7)'  , name_l='A³Σ⁺u(v=3)' , μv=P(1.08517554849  ,False, 1e-05))

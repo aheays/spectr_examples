@@ -56,7 +56,7 @@ vlevel.add_manifold(
 
 ## VibLine object combining two VibLevel (or the same one twice) to
 ## compute the transitions between them
-vline = viblevel.VibLine('vline',vlevel)
+vline = viblevel.VibLine(vlevel)
 ## add a transition moment between two named electronic-vibrational levels
 vline.add_transition_moment(
     'W(v=2)',                   # taken from "upper" VibLevel
