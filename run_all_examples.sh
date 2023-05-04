@@ -27,6 +27,7 @@ for path in (
         'emission/fit_emission_band_3.py',
 
         'viblevel/3Π_3Σ+_transition.py',
+        'viblevel/run_comparison_with_pgopher.py',
 
         'argo/analyse_argo_1.py',
         'argo/analyse_argo_2.py',
