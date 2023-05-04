@@ -51,7 +51,7 @@ Individual steps:
 Test by importing spectr and trying to plot something
    : source venv3/bin/activate
    : echo "from spectr.env import *" | python
-   : qplot examples/absorption/data/2021_11_30_bcgr.0
+   : qplot absorption/data/2021_11_30_bcgr.0
 
 * Usage
 ** Importing =spectr=
@@ -81,14 +81,14 @@ This is a command line programming for making line plots, e.g., =qplot datafile=
 First start a virtual environment if needed with =source
 path/to/venv3/bin/activate= then to run a script:
    #+BEGIN_SRC sh
-     cd examples/subdirectory
+     cd subdirectory
      python script.py
    #+END_SRC
-Output from the scripts are in =examples/subdirectory/output=.
+Output from the scripts are in =subdirectory/output=.
    
 ** Modelling absorption spectra 
 Example scripts showing how to quantify species in infrared absorption spectra.
-*** =examples/absorption/fit_one_line.py=
+*** =absorption/fit_one_line.py=
 This function automatically fits the column density and pressure
 broadening of HITRAN speces in IR absorption spectra.  This will
 work sometimes but fail when the spectrum is more complex.
@@ -96,42 +96,42 @@ The frequency range is given by the preset =characteristic_infrared_bands=
 values in file:spectr/data/species_data.py.  To fit other species (or
 multiple) ='HCN'= with e.g., ='CO'= or ='H2O'=.
 
-*** =examples/absorption/fit_manually_1.py=
+*** =absorption/fit_manually_1.py=
 This is a lower-level script that fits a small part of one
 spectrum.  The model results are output to
-=examples/output/fit_manually_1/model_of_experiment=.
-*** =examples/absorption/fit_manually_2.py=
+=output/fit_manually_1/model_of_experiment=.
+*** =absorption/fit_manually_2.py=
 A script that fits an entire spectrum including all identified species.
 
-*** =examples/absorption/fit_manually_3.py=
+*** =absorption/fit_manually_3.py=
 A script that fits the CO fundamental band including more instrumental
 effects.
 
-*** =examples/absorption/fit_absorption_1.py=
+*** =absorption/fit_absorption_1.py=
 This script uses a FitAbsorption object to more conveniently fit
 multiple species in a spectrum.  
 
-*** =examples/absorption/fit_absorption_2.py=
+*** =absorption/fit_absorption_2.py=
 A FitAbsorption script that fits multiple species in multiple spectra.
 
-*** =examples/absorption/fit_absorption_3.py=
+*** =absorption/fit_absorption_3.py=
 A FitAbsorption script to that fits a cross section file (downloaded from HITRAN) to an experimental spectrum.  It also uses a measured background rather than a fitted spline curve.
 
 ** Modelling emission spectra
-*** =examples/emission/compute_emission_band.py=
+*** =emission/compute_emission_band.py=
 Computes a list of diatomic level energies from molecular constants of electronic-vibrational bands, and then computes a linelist of electric-dipole transitions.
-*** =examples/emission/fit_emission_band_1.py=
+*** =emission/fit_emission_band_1.py=
 Uses a linelist computed from molecular constants to fit the temperature of \ce{N2} emission in a laboratory spectrum. 
-*** =examples/emission/fit_emission_band_2.py=
+*** =emission/fit_emission_band_2.py=
 Fit the temperature and molecular constants of multiple \ce{N2} emission bands in a laboratory spectrum. 
-*** =examples/emission/fit_emission_band_3.py=
+*** =emission/fit_emission_band_3.py=
 Fit an effective J-dependent rotational temperature to some emission bands.
 ** Analysing ARGO output
-*** =examples/argo/analyse_argo_1.py=
+*** =argo/analyse_argo_1.py=
 Load a model and print whats in it.
-*** =examples/argo/analyse_argo_2.py=
+*** =argo/analyse_argo_2.py=
 Plot the dominant production and destruction reactions affecting particular species.
-*** =examples/argo/analyse_argo_3.py=
+*** =argo/analyse_argo_3.py=
 Compare two models.
 ** Computing effective-Hamiltonian diatomic level energies and linelists
 **** =viblevel/3Π_3Σ+_transition.py=
@@ -139,68 +139,4 @@ Compute level energies from molecular constants and combine into a
 line list.
 **** =viblevel/run_comparison_with_pgopher.py=
 Compare various linear transitions with the output of pgopher.
-
-* Submodules
-** =env.py=
-Conveniently import all submodules.
-** =dataset.py=
-Storage, manipulation, and plotting of tabular data. Allows for the
-recursive calculation of derived quantities
-** =tools.py=
-Functions for performing common mathematical and scripting tasks.
-** =plotting.py=
-Functions for plotting built on matplotlib.
-** =convert.py=
-Unit conversion, species name conversion, and various conversion formulae.
-** =optimise.py=
-General class for conveniently and hierarchically building numerical
-models with optimisable parameters.
-** =atmosphere.py=
-Classes for analysing atmospheric photochemistry.
-** =lines.py=
-Dataset subclasses for storing atomic and molecular line data.
-** =levels.py=
-Dataset subclasses for storing atomic and molecular level data.
-** =bruker.py=
-Interact with output files of Bruker OPUS spectroscopic acquisition
-and analysis software. 
-** =database.py=
-Interface to internal spectroscopic and chemistry database.  
-** =electronic_states.py=
-Calculation of diatomic level energies from potential-energy curves.
-** =exceptions.py=
-Exception used to internally communicate failure conditions.
-** =hitran.py=
-Access HITRAN spectroscopic data with hapy.
-** =lineshapes.py=
-Simulate individual and groups of spectra lines of various shapes.
-** =quantum_numbers.py=
-Functions for manipulating atomic and molecular quantum numbers.
-** =spectrum.py=
-Classes for manipulating and modelling of experimental spectroscopic datea.
-** =thermochemistry.py=
-Functions for computing thermochemical equilibrium with ggchem.
-** =viblevel.py=
-Classes for simulating diatomic levels and lines defined by effective Hamiltonians.
-** =fortran_tools.f90=
-Various fortran functions and subroutines.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
