@@ -34,7 +34,8 @@ model.convolve_with_instrument_function(
     blackman_harris_resolution = P(0.0386177915717,False,3e-07,4e-05,(0,inf))
 )
 
-## This scales the intensity by a sinusoid function.  This must be done after absorption has been added to the model.  To use the auto
+## This scales the intensity by a sinusoid function.  This must be
+## done after absorption has been added to the model.  To use the auto
 ## recorded in some experiments
 # model.auto_scale_piecewise_sinusoid(xi=50,vary=True)
 model.scale_piecewise_sinusoid(regions=[[2090.00776072448, 2143.9973428423573, P(0.029071492581,False,1.3e-07,5e-05), P(1.55867095328,False,1.6e-05,2.7e-05), P(3.36991734689,False,6.3e-05,0.0043)], [2143.9973428423573, 2197.9869249602343, P(0.0275092564449,False,1.2e-07,5.2e-05), P(1.55828695157,False,1.6e-05,1.4e-05), P(4.27586479915,False,6.3e-05,0.0031)]])

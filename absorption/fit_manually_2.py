@@ -32,6 +32,14 @@ model.add_hitran_line(
     **common
 )
 
+### model.add_hitran_line(
+###     '¹²C¹⁶O₂',
+###     # chemical_species='CO2',
+###     Nchemical_species = P(7.4641157658e+15,False,1e+12,5.9e+13),
+###     pair       = P(7545.31407688,False,1,3.9e+02,(100,50000)),
+###     **common
+### )
+
 model.add_hitran_line(
     'CO',
     Nchemical_species = P(3.18641247407e+17,False,1e+12,3.8e+15),

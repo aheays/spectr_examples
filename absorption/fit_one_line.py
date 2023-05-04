@@ -1,4 +1,4 @@
-"""Fit species in an IR spectrum"""
+"""Fit species in an IR spectrum in a single function call."""
 
 ## import the necessary function
 from spectr.spectrum import fit_species_absorption

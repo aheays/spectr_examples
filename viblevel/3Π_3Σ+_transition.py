@@ -9,12 +9,13 @@ vlevel = viblevel.Level(species='32S16O')
 ## lower state
 vlevel.add_manifold(name='X.3Σ+(v=0)', Tv=0, Bv=1, λv=1, γv=0.01)
 
-## upper state
-vlevel.add_manifold(name='B.3Π(v=0)', Tv=50000, Bv=1.1, Av=10) 
+## upper state (uses unicode superscript for term symbol quantum
+## numbers)
+vlevel.add_manifold(name='B³Π(v=0)', Tv=50000, Bv=1.1, Av=10) 
 
 # ## vline
 vline = viblevel.Line(vlevel)
-vline.add_transition_moment('B.3Π(v=0)','X.3Σ+(v=0)',μv=1)
+vline.add_transition_moment('B³Π(v=0)','X.3Σ+(v=0)',μv=1)
 vline.construct()
 
 ## save output

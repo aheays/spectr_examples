@@ -56,7 +56,7 @@ vlevel.add_manifold(
 
 ## VibLine object combining two VibLevel (or the same one twice) to
 ## compute the transitions between them
-vline = viblevel.VibLine(vlevel)
+vline = viblevel.VibLine(vlevel,'vline')
 ## add a transition moment between two named electronic-vibrational levels
 vline.add_transition_moment(
     'W(v=2)',                   # taken from "upper" VibLevel
@@ -90,7 +90,7 @@ model.add_line(
     ## by specirying the Lorentzian FWHM to be 0
     ΓG=0.2,                     
     ΓL=0,
-    ## don't bother messinag around with partition functions in this
+    ## don't bother messing around with partition functions in this
     ## non-absolute measurement
     Zsource='unity',
     ## The instrumental efficiency. 
