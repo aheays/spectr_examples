@@ -1,9 +1,9 @@
 # -*- mode: org; eval: (auto-fill-mode 0); -*-
 #+OPTIONS: toc:2
-#+TITLE:Data analysis with =spectr=
+#+TITLE:Example scripts using =spectr=
 
 * Introduction
-To install these example scripts and data clone [[https://github.com/aheays/spectr_examples]], with, e.g., , =git clone --depth=1 https://github.com/aheays/spectr_examples.git=.
+Some examples of using =spectr= for analysing molecular spectra.
 
 * Installation
 ** Source code
