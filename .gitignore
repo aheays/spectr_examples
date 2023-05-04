@@ -1,1 +1,8 @@
+spectr
+README.pdf
+README.tex
+data
+venv*
 output
+Na_emission_in_jh-inst_plasma/
+*.zip
