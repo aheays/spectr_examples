@@ -9,8 +9,8 @@ import subprocess,os,importlib
 import matplotlib
 # matplotlib.use('pdf')
 
+base_directory = os.path.dirname(os.path.realpath(__file__))
 
-original_directory = os.getcwd()
 for path in (
 
         'absorption/fit_absorption_1.py',
@@ -36,7 +36,6 @@ for path in (
 ):
     print(f'\n\n===== running {path!r} =====')
     directory,filename = os.path.split(path)
-    os.chdir(original_directory)
-    os.chdir(directory)
+    os.chdir(base_directory+'/'+directory)
     exec(open(filename).read())
 
